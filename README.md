@@ -11,7 +11,7 @@ Este repositorio es parte del curso de **Programacion Orientada a Objetos** de l
 
 Asegúrate de tener instaladas las siguientes herramientas:
 
-- 🟢 **Java JDK**: [Descargar Node.js](https://www.oracle.com/java/technologies/downloads/)
+- 🟢 **Java JDK**: [Descargar JDK 8](https://www.oracle.com/java/technologies/downloads/)
 - 🖥️ **Visual Studio Code**: [Descargar VS Code](https://code.visualstudio.com/)
 - 🐙 **Git**: [Descargar Git](https://git-scm.com/)
 
