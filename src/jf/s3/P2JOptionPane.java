@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 public class P2JOptionPane {
     public static void main(String[] args) {
         
-        String name = JOptionPane.showInputDialog("Enter your name");   
+        String name = JOptionPane.showInputDialog(null, "Enter your name");   
         String mensaje = "¡Hola, " + name + "! Bienvenido a POO";             
         JOptionPane.showMessageDialog(null, mensaje);
 
