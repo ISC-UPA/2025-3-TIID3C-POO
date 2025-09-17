@@ -1,9 +1,9 @@
-package example;
+
 
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
-public class captura {
+public class P01Captura {
     public static void main(String[] args) {
         System.out.println("\033[H\033[2J"); // limpiar pantalla
         String nombre;

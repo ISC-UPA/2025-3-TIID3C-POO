@@ -2,19 +2,12 @@ import java.util.Scanner;
 
 public class prueba {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String linea;
-        int b;
+        int players = 0;
 
-        System.out.print("Introduce un número: ");
-        linea = sc.nextLine();
-
-        try {
-            b = Integer.parseInt(linea);
-            System.out.println("Número ingresado: " + b);
-        } catch (NumberFormatException e) {
-            System.out.println("Error: la entrada no es un número válido.");
-        }
-
+    // pre y post incremento y decremento
+    System.out.println("players online: " + players++);
+    System.out.println("The value of players is " + players);
+    System.out.println("The value of players is now " + ++players);
+    System.out.println("The value of players is " + players);        
     }
 }
