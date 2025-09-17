@@ -1,5 +1,7 @@
-public class P03Rifa {
-    public static int suma(int n) {
+package p1;
+public class Funciones {
+
+        public static int sumatoria(int n) {
         // r = 1 + 2 + 3 + 4 + ... +  + 10
         // r = 10 + 9 + 8 + . . + 2 + 1
         int resultado = 0;
@@ -10,16 +12,17 @@ public class P03Rifa {
         return resultado;
     }
 
-    public static void main(String[] args) {
-        // entrada
-        int n = 10;
-        int r = 0;
-
-        // proceso
-        // r = suma(n);
-        r = Funciones.sumatoria(n);
-        // salida
-        System.out.println(r); 
-
+    public int mayor(int a, int b) {
+        return 0;
     }
+
+
+
+    public static void main(String[] args) {
+        int n = 10;
+        int r = sumatoria(n);
+        System.out.println("La sumatoria de 1 a " + n + " es: " + r);
+    }
+
+
 }

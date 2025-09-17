@@ -1,3 +1,4 @@
+package p1;
 import java.util.Scanner;
 
 public class P02Metodos {
@@ -29,6 +30,7 @@ public class P02Metodos {
         r = x / b; // division
         return r;
     }    
+    
     public static void main(String[] args) {
         System.out.println("\033[H\033[2J"); // limpiar pantalla
         capturar();
