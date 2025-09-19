@@ -1,4 +1,6 @@
 package jf.s3;
+import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
 public class P2JOptionPane {
@@ -32,6 +34,9 @@ public class P2JOptionPane {
                 null,
                 acceptableValues,
                 acceptableValues[1]);
+
+        Scanner sc = new Scanner(P2JOptionPane.class.getResourceAsStream("input04text.txt"));      
+        System.out.println(sc.findInLine("BlueBumper"));
                 
     }
 }

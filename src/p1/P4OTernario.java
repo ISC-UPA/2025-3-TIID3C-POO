@@ -1,7 +1,6 @@
 package p1;
 import java.util.Scanner;
 
-
 public class P4OTernario {
 
     public static int mayor(int a, int b) {
@@ -41,10 +40,7 @@ public class P4OTernario {
         return (x % 2 == 0) ? true : false;
     }
 
-
-
     public static void main(String[] args) {
-
         int x = 20;
         int y = 6;
         int r = mayor(x, y);
