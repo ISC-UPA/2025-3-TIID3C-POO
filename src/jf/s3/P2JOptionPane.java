@@ -17,13 +17,14 @@ public class P2JOptionPane {
                 0); // 0 = X, 1 = !, 2 = ?
 
         
-        String input1 = (String)JOptionPane.showInputDialog(null,
+        String input1 = (String) JOptionPane.showInputDialog(null,
                 "Is this a question?",
                 "Dialog Title",
                 2,
                 null,
                 null,
                 "Type something here.");
+        System.out.println("You entered: " + input1);
         
         
         String[] acceptableValues = {"Choice 1", "Choice 2", "Choice 3"};
@@ -35,8 +36,10 @@ public class P2JOptionPane {
                 acceptableValues,
                 acceptableValues[1]);
 
-        Scanner sc = new Scanner(P2JOptionPane.class.getResourceAsStream("input04text.txt"));      
-        System.out.println(sc.findInLine("BlueBumper"));
+        //Scanner sc = new Scanner(System.in);
+        //Scanner sc = new Scanner(P2JOptionPane.class.getResourceAsStream("texto.txt"));      
+        //System.out.println(sc.findInLine("UPA"));
+        //sc.close();
                 
     }
 }
