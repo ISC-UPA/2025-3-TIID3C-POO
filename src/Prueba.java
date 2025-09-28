@@ -1,17 +1,23 @@
-import java.util.Scanner;
-
-import javax.swing.JOptionPane;
-
 public class Prueba {
+    double tax = 0.05;
+    double tip = 0.15;
+
     public static void main(String[] args) {
         System.out.println("\033[H\033[2J"); // limpiar pantalla
-        Scanner sc = new Scanner(System.in);
-        int  x = sc.nextInt();
-        double y = sc.nextDouble();
-        String z = sc.next();
-        String linea = sc.nextLine();
-        int numero = Integer.parseInt(z);
+        String nombre = "Pepito";
+        System.out.println("longitud: " + nombre.length());
+        System.out.println("upperCase: " + nombre.toUpperCase());
 
-        sc.close();
+        String totalPrice = "Total: $ " + 3 + 2 + 1;
+        System.out.println(totalPrice);
+        totalPrice = 3 + 2 + 1 + " Total: $ ";
+        System.out.println(totalPrice);
+        totalPrice = "Total: $ " + (3 + 2 + 1);
+        System.out.println(totalPrice);
+
+        System.out.println("The cat said \"Meow!\" to me.");
+        System.out.print("1\t2\t3\t\"Hola\" mundo\n");
+        System.out.println("\nHola\nAdios");
+
     }
 }
