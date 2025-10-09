@@ -1,7 +1,7 @@
 package p1;
 import java.util.Scanner;
 
-public class P4OTernario {
+public class P04OTernario {
 
     public static int mayor(int a, int b) {
         /*/

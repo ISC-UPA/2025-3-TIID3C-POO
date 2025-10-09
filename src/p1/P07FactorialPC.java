@@ -1,6 +1,6 @@
 package p1;
 
-public class P8FactorialPC {
+public class P07FactorialPC {
 
     public static int factorial(int n) {
         int resultado = 1;
