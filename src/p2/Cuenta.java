@@ -21,7 +21,7 @@ public class Cuenta {
     }
 
     public void depositar(double monto) {
-            saldo += monto;
+        saldo += monto;
     }
 
     public void retirar(double monto) {
@@ -42,14 +42,16 @@ public class Cuenta {
         cuenta2.retirar(400);
 
         // arreglo de cuentas
-        Cuenta[] cuentas = new Cuenta[2];
+        int[] datos = new int[2];
+        datos[0] = 1;
+
+        Cuenta[] cuentas = new Cuenta[3];
         cuentas[0] = cuenta1;
-        cuentas[1] = new Cuenta(2, "MaryGomez", 500.0);
+        cuentas[1] = new Cuenta(2, "MaryGomez", 500.0);  // efectivo
+        cuentas[2] = new Cuenta(3, "Pedro Ruiz", 700.0);
 
         for (int i = 0; i < cuentas.length; i++) {
             System.out.println("Titular: " + cuentas[i].titular + "  saldo: " + cuentas[i].getSaldo());
         }
-
     }
-
 }
