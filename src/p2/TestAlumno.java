@@ -15,6 +15,8 @@ public class TestAlumno {
                     "  Fecha Nac: " + alumnos[i].getFechaNacimiento() +
                     "  Dia: " + alumnos[i].diaSemana());
         }
+
+        
     }
     
 }
