@@ -6,6 +6,10 @@ public class Cuenta {
     double saldo;
 
     // Constructor: Inicializa los atributos de la cuenta
+
+    public Cuenta() {
+    }
+
     public Cuenta(int numeroID, String nombre, double saldo) {
         this.numeroID = numeroID;
         titular = nombre;
@@ -28,18 +32,23 @@ public class Cuenta {
         if (monto <= saldo) {
             saldo = saldo - monto;
         } else {
-            System.out.println("No tienes esa cantidad en tu cuenta");
+            System.out.println("Sin suficiente saldo");
         }
     }
 
     public static void main(String[] args) {
-        Cuenta cuenta1 = new Cuenta(1, "Juan Perez", 1000.0);
-        Cuenta cuenta2 = new Cuenta(2, "Maria Gomez", 2000.0);
-        cuenta2.saldo = cuenta2.saldo + 500.0; // Depositar 500 en la cuenta de Maria
-        cuenta1.depositar(300.0); // Depositar 300
+        Cuenta cuenta1 = new Cuenta();
+        cuenta1.numeroID = 1;
+        cuenta1.titular = "Jesus";
+        cuenta1.saldo = 1000;
+        Cuenta cuenta2 = new Cuenta(2, "Maria", 2000);
+        Cuenta cuenta3 = new Cuenta(3, "Jose", 3000);
+
+        System.out.println(cuenta1.getSaldo());
+
+        cuenta1.saldo = cuenta2.saldo + 500;
+        cuenta2.depositar(300.0);
         cuenta2.retirar(1100);
-        cuenta2.retirar(1500);
-        cuenta2.retirar(400);
 
         // arreglo de cuentas
         int[] datos = new int[2];

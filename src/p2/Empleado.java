@@ -3,16 +3,20 @@ import java.time.LocalDate;
 // La empresa trabaja 40 horas semanales
 // El salario base es semanal
 public class Empleado {
+
     int ID;
     String nombre;
-    double salarioBase;
+    double salarioBaseSemanal;
     LocalDate fechaNacimiento;
+    String puesto;
+
 
     public Empleado(int ID, String nombre, double salarioBase, LocalDate fechaNacimiento) {
         this.nombre = nombre;
         this.ID = ID;
-        this.salarioBase = salarioBase;
+        this.salarioBaseSemanal = salarioBase;
         this.fechaNacimiento = fechaNacimiento;
+        
     }
 
     public int getID() {

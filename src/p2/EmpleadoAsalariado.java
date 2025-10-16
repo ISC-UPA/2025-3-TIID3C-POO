@@ -4,16 +4,29 @@ import java.time.LocalDate;
 
 // horas extras se pagan al doble
 public class EmpleadoAsalariado extends Empleado {
-    int horasTrabajadas;
-    String puesto;
+    static final int HORAS_SEMANALES = 40;  // politica de la empresa
 
-    public EmpleadoAsalariado(int ID, String nombre, double salarioBase, LocalDate fechaNacimiento) {
+    int horasTrabajadas;
+
+    public EmpleadoAsalariado(int ID, String nombre, double salarioBase, LocalDate fechaNacimiento, int horasSemanales) {
         super(ID, nombre, salarioBase, fechaNacimiento);
-        this.horasTrabajadas = 40; // Asumiendo 40 horas semanales por defecto
-        this.puesto = "Empleado Asalariado"; // Puesto por defecto
+        this.horasTrabajadas = horasSemanales;
     }
+    
     public double calcularSalario() {
-        return salarioBase * horasTrabajadas;
+        double pagoExtras = 0;
+        double horasExtras = 0;
+        double total = 0; 
+        double precioHora = salarioBaseSemanal / HORAS_SEMANALES;
+
+        if (horasTrabajadas <= HORAS_SEMANALES) { // normal o menos horas
+            total = precioHora * horasTrabajadas ;
+        } else {   // horas extras
+            horasExtras = (horasTrabajadas - HORAS_SEMANALES) * 2;
+            pagoExtras = horasExtras * precioHora;
+            total = salarioBaseSemanal + pagoExtras;
+        }
+        return total;
     }
 
 }

@@ -7,8 +7,6 @@ public class EmpleadoComision extends Empleado {
         double ventas;
         String puesto;
 
-
-
     public EmpleadoComision(int ID, String nombre, double salarioBase, LocalDate fechaNacimiento) {
         super(ID, nombre, salarioBase, fechaNacimiento);
         //TODO Auto-generated constructor stub
