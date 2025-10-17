@@ -2,13 +2,12 @@ package p2;
 import java.time.LocalDate;
 // La empresa trabaja 40 horas semanales
 // El salario base es semanal
-public class Empleado {
 
+public class Empleado {
     int ID;
     String nombre;
     double salarioBaseSemanal;
     LocalDate fechaNacimiento;
-    String puesto;
 
 
     public Empleado(int ID, String nombre, double salarioBase, LocalDate fechaNacimiento) {
