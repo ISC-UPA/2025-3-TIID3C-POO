@@ -1,4 +1,4 @@
-package p2;
+package p2.P01EsUn_TieneUn;
 
 public class Cuenta {
     int numeroID;

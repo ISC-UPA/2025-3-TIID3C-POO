@@ -1,4 +1,4 @@
-package p2;
+package p2.P01EsUn_TieneUn;
 import java.time.LocalDate;
 // La empresa trabaja 40 horas semanales
 // El salario base es semanal
