@@ -49,6 +49,7 @@ public class Carcel {
         Prisoner twitch = new Prisoner("Twitch", 1.73, 3, new Cell("B-1", false, 5678));
         System.out.println(bubba1.cell.isOpen);
         bubba1.cell.setIsOpen(1278);
+        System.out.println(bubba1.cell.isOpen);
 
     }
 }
