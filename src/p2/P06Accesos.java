@@ -1,3 +1,4 @@
+package p2;
 class Cell {
     public String name;
     public boolean isOpen;
@@ -12,11 +13,11 @@ class Cell {
     public void setIsOpen(int code) {
     }
 
-
-
 }
 
 class Prisoner {
+    static int prisonerCount=0;
+
     public String name;
     public double height;
     public int sentence;
@@ -32,9 +33,13 @@ class Prisoner {
     public Prisoner() {
         // TODO Auto-generated constructor stub
     }
+
+    public static int getPrisonerCount() {
+        return prisonerCount;
+    }
 }
 
-public class Carcel {
+public class P06Accesos {
 
     public static void main(String[] args) {
         Prisoner bubba = new Prisoner();
@@ -50,6 +55,7 @@ public class Carcel {
         System.out.println(bubba1.cell.isOpen);
         bubba1.cell.setIsOpen(1278);
         System.out.println(bubba1.cell.isOpen);
+        System.out.println(Prisoner.getPrisonerCount());
 
     }
 }

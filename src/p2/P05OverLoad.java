@@ -1,4 +1,5 @@
-public class Calculator {
+package p2;
+public class P05OverLoad {
     // overloaded methods
     
     public int sum(int num1, int num2) { 
@@ -24,7 +25,7 @@ public class Calculator {
 
     public static void main(String[] args) {
         double result;
-        Calculator calc = new Calculator();
+        P05OverLoad calc = new P05OverLoad();
         result = calc.sum(5, 10);
 
         result = calc.sum(5, 10.0);
