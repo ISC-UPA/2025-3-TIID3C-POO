@@ -1,7 +1,10 @@
 package p2;
+
+import java.time.LocalDate;
+
 class Cell {
-    public String name;
-    public boolean isOpen;
+    private String name;
+    private boolean isOpen;
     private int securityCode;
 
     public Cell(String n, boolean o, int code) {
@@ -10,7 +13,22 @@ class Cell {
         securityCode = code;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public boolean isOpen() {
+        return isOpen;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void setIsOpen(int code) {
+        if (securityCode == code) {
+            isOpen = !isOpen;
+        }
     }
 
 }
@@ -18,10 +36,13 @@ class Cell {
 class Prisoner {
     static int prisonerCount=0;
 
-    public String name;
-    public double height;
-    public int sentence;
-    public Cell cell;
+    private String name;
+    private double height;
+    private int sentence;
+    private LocalDate birthDate;
+    private LocalDate entryDate;  
+    private Cell cell;
+
 
     public Prisoner(String n, double h, int s, Cell c) {
         name = n;
@@ -51,6 +72,7 @@ public class P06Accesos {
         // System.out.println(test.length());
 
         Prisoner bubba1 = new Prisoner("Bubba", 2.08, 4, new Cell("A-1", false, 1234));
+        bubba1.cell.isOpen = true;
         Prisoner twitch = new Prisoner("Twitch", 1.73, 3, new Cell("B-1", false, 5678));
         System.out.println(bubba1.cell.isOpen);
         bubba1.cell.setIsOpen(1278);
