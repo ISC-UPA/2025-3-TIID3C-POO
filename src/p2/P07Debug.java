@@ -2,8 +2,8 @@ package p2;
 public class P07Debug {
 
     public static int sumatoria(int n) {
-        int sum = 10;
-        while (n > 1) {
+        int sum = 0;
+        while (n >= 1) {
             sum = sum + n;
             n--;
         }

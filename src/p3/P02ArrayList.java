@@ -1,7 +1,9 @@
 package p3;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 class Persona {
     String nombre;
@@ -26,6 +28,11 @@ public class P02ArrayList {
         System.out.println("El nombre en la posicion 3 es: " + nombre);
         names.remove(3);
 
+        Iterator<String> iterator = names.iterator();
+        while (iterator.hasNext()) {
+            System.out.println("Name is -> " + iterator.next());
+        }
+
         System.out.println("Contenido de la lista:");
         for (String elemento : names) {
             System.out.println(elemento);
@@ -40,25 +47,5 @@ public class P02ArrayList {
             System.out.println(i);
         } // end for
 
-        int divisor = 0;
-        if (divisor == 0) {
-            System.out.println("Can't be zero!");
-        } else {
-            System.out.println(5 / divisor);
-        } // endif
-
-        try {
-            System.out.println(5 / divisor);
-        } catch (ArithmeticException e) {
-            System.out.println("Can't be zero!");
-        }
-        try {
-            File testFile = new File("//testFile.txt");
-            testFile.createNewFile();
-            System.out.println("testFile exists: " + testFile.exists());
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-        System.out.println(". . .Hecho!");
-    }
+   }
 }
