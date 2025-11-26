@@ -34,13 +34,12 @@ public class P04JavaFXMain2 extends Application {
         // create simple linear gradient
         LinearGradient gradient1 = new LinearGradient(0, 0, 1, 0, true,
                 CycleMethod.NO_CYCLE, new Stop[] {
-                        new Stop(0, Color.DODGERBLUE),
-                        new Stop(1, Color.BLACK)
+                        new Stop(1, Color.DODGERBLUE),
+                        new Stop(0, Color.BLACK)
                 });
 
         Button btn = new Button("Calcular");
-        // btn.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 0%,
-        // DODGERBLUE, BLACK);");
+        //btn.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 0%, DODGERBLUE, BLACK);");
         Rectangle rect = new Rectangle(20, 20, 100, 150); // x, y, width, height
         rect.setFill(color);
         // rect.setFill(gradient1);
@@ -63,7 +62,7 @@ public class P04JavaFXMain2 extends Application {
 
         root.getChildren().addAll(rootHBox, btn);
 
-        Scene scene = new Scene(root, 300, 250, Color.LIGHTGRAY);
+        Scene scene = new Scene(root, 350, 300, Color.LIGHTGRAY);
 
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);

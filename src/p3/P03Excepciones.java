@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class P03Excepciones {
     public static void main(String[] args) {
-        // ---------------------- Excepciones ---------------------
+
         int divisor = 0;
         if (divisor == 0) {
             System.out.println("Can't be zero!");
@@ -15,6 +15,7 @@ public class P03Excepciones {
 
         try {
             System.out.println(5 / divisor);
+            System.out.println("Ya hice la division");
         } catch (ArithmeticException e) {
             System.out.println("Can't be zero!");
         }

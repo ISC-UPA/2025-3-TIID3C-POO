@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 class Persona {
     String nombre;
@@ -46,6 +48,12 @@ public class P02ArrayList {
             int nos = i;
             System.out.println(i);
         } // end for
+
+        int[] arr = { 1, 2, 3, 4, 5 };
+        // Pasar arr a ArrayList<Integer> en UNA sola instrucción:
+        ArrayList<Integer> arrayListFromArray = Arrays.stream(arr).boxed().collect(Collectors.toCollection(ArrayList::new));
+        System.out.println("ArrayList generado: " + arrayListFromArray);
+        
 
    }
 }

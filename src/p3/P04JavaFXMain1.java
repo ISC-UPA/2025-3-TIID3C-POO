@@ -40,12 +40,12 @@ public class P04JavaFXMain1 extends Application {
        
         
         btn.setOnAction(event -> {
-            System.out.println("Hello World!");
-            if (event.getSource() == btn) {
+            System.out.println("Hello World!....");
+            //if (event.getSource() == btn) {
                 btn.setStyle("-fx-background-color: #205d83ff;");
-            }
-            //btn.setOnMousePressed(e -> btn.setStyle("-fx-background-color: #00ff00;"));
-            //btn.setOnMouseReleased(e -> btn.setStyle("-fx-background-color: #ff0000;"));
+            //}
+            btn.setOnMousePressed(e -> btn.setStyle("-fx-background-color: #00ff00;"));
+            btn.setOnMouseReleased(e -> btn.setStyle("-fx-background-color: #ff0000;"));
         });
         
 
