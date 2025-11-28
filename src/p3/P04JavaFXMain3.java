@@ -1,6 +1,7 @@
 package p3;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -20,6 +21,7 @@ public class P04JavaFXMain3 extends Application {
         Image image1 = new Image(getClass().getResource("../vis/fan1.png").toString());
         Image image2 = new Image(getClass().getResource("../vis/fan2.png").toString());
         ImageView imageView = new ImageView(image1);
+        ImageView imageView2 = new ImageView(image1);
         // imageView.setFitWidth(50);
         // imageView.setPreserveRatio(true);
         // imageView.toFront();
@@ -31,7 +33,8 @@ public class P04JavaFXMain3 extends Application {
         BorderPane root = new BorderPane(); // Group root = new Group();
         Label lbl2 = new Label("Hello, POO!");
         root.setTop(rootHBox);
-        root.setCenter(imageView);
+        root.setLeft(imageView);
+        root.setRight(imageView2);
 
         audio.play();
         // cada vez que se hace click en la imagen, audio.play();
@@ -47,12 +50,29 @@ public class P04JavaFXMain3 extends Application {
 
         new Thread(() -> {
             for (int i = 0; i < 500; i++) {
+                final int index = i;
                 try {
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                imageView.setImage(i % 2 == 0 ? image1 : image2);
+                Platform.runLater(() -> {
+                    imageView.setImage(index % 2 == 0 ? image1 : image2);
+                });
+            }
+        }).start();
+
+         new Thread(() -> {
+            for (int i = 0; i < 500; i++) {
+                final int index = i;
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Platform.runLater(() -> {
+                    imageView2.setImage(index % 2 == 0 ? image2 : image1);
+                });
             }
         }).start();
 
