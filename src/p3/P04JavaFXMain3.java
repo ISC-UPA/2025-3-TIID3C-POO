@@ -14,6 +14,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class P04JavaFXMain3 extends Application {
+    double angulo1 = 0;
 
     public void start(Stage primaryStage) {
 
@@ -22,6 +23,8 @@ public class P04JavaFXMain3 extends Application {
         Image image2 = new Image(getClass().getResource("../vis/fan2.png").toString());
         ImageView imageView = new ImageView(image1);
         ImageView imageView2 = new ImageView(image1);
+        ImageView imageView3 = new ImageView(image1);
+
         // imageView.setFitWidth(50);
         // imageView.setPreserveRatio(true);
         // imageView.toFront();
@@ -35,6 +38,7 @@ public class P04JavaFXMain3 extends Application {
         root.setTop(rootHBox);
         root.setLeft(imageView);
         root.setRight(imageView2);
+        root.setCenter(imageView3);
 
         audio.play();
         // cada vez que se hace click en la imagen, audio.play();
@@ -62,7 +66,7 @@ public class P04JavaFXMain3 extends Application {
             }
         }).start();
 
-         new Thread(() -> {
+        new Thread(() -> {
             for (int i = 0; i < 500; i++) {
                 final int index = i;
                 try {
@@ -72,6 +76,20 @@ public class P04JavaFXMain3 extends Application {
                 }
                 Platform.runLater(() -> {
                     imageView2.setImage(index % 2 == 0 ? image2 : image1);
+                });
+            }
+        }).start();
+
+        new Thread(() -> {
+            while (true) {
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Platform.runLater(() -> {
+                    angulo1 -= 15;
+                    imageView3.setRotate(angulo1);
                 });
             }
         }).start();
