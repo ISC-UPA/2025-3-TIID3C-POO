@@ -54,8 +54,7 @@ public class TablaFX extends Application {
         Scene scene = new Scene(root, 500, 400);
         primaryStage.setTitle("Tabla de Multiplicar - JavaFX");
         primaryStage.setScene(scene);
-        primaryStage.show();
-    }
+        primaryStage.show();}
 
     private void calcularTabla(TextField textField) {
         try {
@@ -74,3 +73,5 @@ public class TablaFX extends Application {
         launch(args);
     }
 }
+
+    
